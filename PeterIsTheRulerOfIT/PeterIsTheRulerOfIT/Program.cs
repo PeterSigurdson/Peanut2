@@ -18,12 +18,14 @@ namespace PeterIsTheRulerOfIT
 
         static void Download()
         {
-            Task.Run(() =>
+            Network.Download();
+        }
+        class Network
+        {
+            static public Task Download()
             {
-                Thread.Sleep(3000);
-                Console.WriteLine("Download Complete ...");
+                return Task.Run( ()=> Thread.Sleep(3000));
             }
-                );
         }
     }
 }
