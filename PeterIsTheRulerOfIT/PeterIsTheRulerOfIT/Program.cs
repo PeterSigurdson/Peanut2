@@ -16,9 +16,10 @@ namespace PeterIsTheRulerOfIT
             Console.ReadLine();
         }
 
-        static void Download()
+        static async void Download()
         {
-            Network.Download();
+            await Network.Download();
+            Console.WriteLine("Download Complete"); 
         }
         class Network
         {
